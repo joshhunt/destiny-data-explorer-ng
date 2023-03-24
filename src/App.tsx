@@ -35,7 +35,7 @@ const Cell = ({
     [tableName]
   );
 
-  const { definition } = useDefinition(tableName, tableIndex) ?? {};
+  const [definition, loaded] = useDefinition(tableName, tableIndex) ?? {};
 
   return (
     <div
@@ -52,7 +52,23 @@ const Cell = ({
     >
       {prettyTableName} {tableIndex}
       <br />
-      {definition?.displayProperties?.name}
+      {loaded ? (
+        definition ? (
+          <div>
+            <img
+              loading="lazy"
+              className="item-icon"
+              alt=""
+              src={`https://www.bungie.net${definition.displayProperties?.icon}`}
+            />{" "}
+            {definition.displayProperties?.name}
+          </div>
+        ) : (
+          <em>unable to load definition</em>
+        )
+      ) : (
+        <em>loading...</em>
+      )}
     </div>
   );
 };
@@ -98,7 +114,7 @@ function ResponsiveGrid({ width, height }: { width: number; height: number }) {
         itemData={{ counts: defCounts, rowCount, columnCount }}
         height={height}
         rowCount={rowCount}
-        rowHeight={35}
+        rowHeight={75}
         width={width}
       >
         {Cell}

@@ -115,16 +115,16 @@ export function useDefinitions() {
 }
 
 const DEFINITION_URLS: Record<string, string> = {
-  DestinyNodeStepSummaryDefinition:
-    "/common/destiny2_content/json/en/DestinyNodeStepSummaryDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
-  DestinyArtDyeChannelDefinition:
-    "/common/destiny2_content/json/en/DestinyArtDyeChannelDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
-  DestinyArtDyeReferenceDefinition:
-    "/common/destiny2_content/json/en/DestinyArtDyeReferenceDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
+  // DestinyNodeStepSummaryDefinition:
+  //   "/common/destiny2_content/json/en/DestinyNodeStepSummaryDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
+  // DestinyArtDyeChannelDefinition:
+  //   "/common/destiny2_content/json/en/DestinyArtDyeChannelDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
+  // DestinyArtDyeReferenceDefinition:
+  //   "/common/destiny2_content/json/en/DestinyArtDyeReferenceDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
   DestinyPlaceDefinition:
     "/common/destiny2_content/json/en/DestinyPlaceDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
-  DestinyActivityDefinition:
-    "/common/destiny2_content/json/en/DestinyActivityDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
+  // DestinyActivityDefinition:
+  //   "/common/destiny2_content/json/en/DestinyActivityDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
   DestinyActivityTypeDefinition:
     "/common/destiny2_content/json/en/DestinyActivityTypeDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
   DestinyClassDefinition:
@@ -137,8 +137,8 @@ const DEFINITION_URLS: Record<string, string> = {
     "/common/destiny2_content/json/en/DestinyRaceDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
   DestinyTalentGridDefinition:
     "/common/destiny2_content/json/en/DestinyTalentGridDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
-  DestinyUnlockDefinition:
-    "/common/destiny2_content/json/en/DestinyUnlockDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
+  // DestinyUnlockDefinition:
+  //   "/common/destiny2_content/json/en/DestinyUnlockDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
   DestinySandboxPerkDefinition:
     "/common/destiny2_content/json/en/DestinySandboxPerkDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
   DestinyStatGroupDefinition:
@@ -149,12 +149,12 @@ const DEFINITION_URLS: Record<string, string> = {
     "/common/destiny2_content/json/en/DestinyFactionDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
   DestinyVendorGroupDefinition:
     "/common/destiny2_content/json/en/DestinyVendorGroupDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
-  DestinyUnlockValueDefinition:
-    "/common/destiny2_content/json/en/DestinyUnlockValueDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
-  DestinyRewardMappingDefinition:
-    "/common/destiny2_content/json/en/DestinyRewardMappingDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
-  DestinyRewardSheetDefinition:
-    "/common/destiny2_content/json/en/DestinyRewardSheetDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
+  // DestinyUnlockValueDefinition:
+  //   "/common/destiny2_content/json/en/DestinyUnlockValueDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
+  // DestinyRewardMappingDefinition:
+  //   "/common/destiny2_content/json/en/DestinyRewardMappingDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
+  // DestinyRewardSheetDefinition:
+  //   "/common/destiny2_content/json/en/DestinyRewardSheetDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
   DestinyItemCategoryDefinition:
     "/common/destiny2_content/json/en/DestinyItemCategoryDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
   DestinyDamageTypeDefinition:
@@ -243,12 +243,12 @@ const DEFINITION_URLS: Record<string, string> = {
     "/common/destiny2_content/json/en/DestinySocketTypeDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
   DestinyTraitDefinition:
     "/common/destiny2_content/json/en/DestinyTraitDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
-  DestinyUnlockCountMappingDefinition:
-    "/common/destiny2_content/json/en/DestinyUnlockCountMappingDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
-  DestinyUnlockEventDefinition:
-    "/common/destiny2_content/json/en/DestinyUnlockEventDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
-  DestinyUnlockExpressionMappingDefinition:
-    "/common/destiny2_content/json/en/DestinyUnlockExpressionMappingDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
+  // DestinyUnlockCountMappingDefinition:
+  //   "/common/destiny2_content/json/en/DestinyUnlockCountMappingDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
+  // DestinyUnlockEventDefinition:
+  //   "/common/destiny2_content/json/en/DestinyUnlockEventDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
+  // DestinyUnlockExpressionMappingDefinition:
+  //   "/common/destiny2_content/json/en/DestinyUnlockExpressionMappingDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
   DestinyVendorDefinition:
     "/common/destiny2_content/json/en/DestinyVendorDefinition-88e2ca87-7551-4503-a5b5-2527c4531503.json",
   DestinyMilestoneDefinition:
@@ -276,14 +276,18 @@ const DEFINITION_URLS: Record<string, string> = {
 };
 
 export function useDefinition(tableName: string, index: number) {
-  const [def, setDef] = useState<any | undefined>(undefined);
+  const [def, setDef] = useState<[any, boolean]>([undefined, false]);
 
   useEffect(() => {
     if (index === -1) return;
 
     async function run() {
-      const defResult = await definitionsStore.getByIndex(tableName, index);
-      setDef(defResult);
+      try {
+        const defResult = await definitionsStore.getByIndex(tableName, index);
+        setDef([defResult.definition, true]);
+      } catch {
+        setDef([undefined, true]);
+      }
     }
 
     run();

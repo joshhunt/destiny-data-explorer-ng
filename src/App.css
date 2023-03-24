@@ -38,3 +38,10 @@
 .fake-grid-item:nth-child(2n) {
   background: blue;
 }
+
+.item-icon {
+  height: 50px;
+  display: inline-block;
+  margin-right: 0.25ch;
+  background: darkslategray;
+}
