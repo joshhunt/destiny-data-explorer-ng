@@ -1,9 +1,5 @@
-import { openDB, deleteDB, wrap, unwrap, IDBPDatabase } from "idb";
+import { openDB, IDBPDatabase } from "idb";
 import { useEffect, useState } from "react";
-
-const DB_NAME = "data-explorer-ng";
-const STORE_NAME = "definitions";
-const DB_VERSION = 1;
 
 interface StoredDefinition {
   tableName: string;
@@ -25,7 +21,7 @@ class DefinitionsStore {
   }
 
   #upgradeHandler(db: IDBPDatabase<unknown>) {
-    const objectStore = db.createObjectStore(STORE_NAME, {
+    const objectStore = db.createObjectStore(this.#storeName, {
       keyPath: ["tableName", "key"],
     });
 

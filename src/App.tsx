@@ -1,7 +1,6 @@
-import React, { useEffect, useMemo, useState } from "react";
-import { useMeasure } from "react-use";
+import React, { useMemo } from "react";
 import AutoSizer from "react-virtualized-auto-sizer";
-import { FixedSizeGrid as Grid, FixedSizeList as List } from "react-window";
+import { FixedSizeGrid as Grid } from "react-window";
 
 import "./App.css";
 import { useDefinition, useDefinitions } from "./populateDefinitions";
