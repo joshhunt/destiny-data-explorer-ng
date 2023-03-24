@@ -85,14 +85,20 @@ async function init() {
     if (storedDefs > 0) continue;
 
     console.log("Fetching", tableName);
-    const req = await fetch("https://www.bungie.net" + defPath);
-    console.log("Parsing", tableName);
-    const data = await req.json();
-    console.log("Storing", tableName);
-    const defs = Object.values(data);
-    defsCounts[tableName] = defs.length;
-    await definitionsStore.addDefinitions(tableName, defs);
-    console.log("Done", tableName);
+
+    try {
+      const req = await fetch("https://www.bungie.net" + defPath);
+      console.log("Parsing", tableName);
+      const data = await req.json();
+      console.log("Storing", tableName);
+      const defs = Object.values(data);
+      defsCounts[tableName] = defs.length;
+      await definitionsStore.addDefinitions(tableName, defs);
+      console.log("Done", tableName);
+    } catch (err) {
+      console.error(err);
+      console.warn("Skipping past that error");
+    }
   }
 
   const counts = Object.entries(defsCounts);
