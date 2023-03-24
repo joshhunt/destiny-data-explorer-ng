@@ -20,7 +20,7 @@ class DefinitionsStore {
     });
   }
 
-  upgradeHandler(db: IDBPDatabase<unknown>) {
+  upgradeHandler = (db: IDBPDatabase<unknown>) => {
     const objectStore = db.createObjectStore(this.storeName, {
       keyPath: ["tableName", "key"],
     });
@@ -28,7 +28,7 @@ class DefinitionsStore {
     objectStore.createIndex("tableName", "tableName");
     objectStore.createIndex("byIndex", ["tableName", "definition.index"]);
     // TODO: store version
-  }
+  };
 
   async addDefinitions(tableName: string, definitions: any[]) {
     const tx = (await this.ready).transaction(this.storeName, "readwrite");
