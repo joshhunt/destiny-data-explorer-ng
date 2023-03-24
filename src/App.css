@@ -1,38 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  height: 100dvh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Grid {
+  /* border: 1px solid #d9dddd; */
+  /* scroll-snap-type: y mandatory; */
+  overflow-x: hidden !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.GridItemEven,
+.GridItemOdd {
+  /* display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center; */
+  /* scroll-snap-align: center; */
+  padding: 4px;
+  font-size: 12px;
 }
 
-.App-link {
-  color: #61dafb;
+.GridItemEven {
+  background-color: #f8f8f0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.fake-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  background: pink;
+  position: absolute;
+  z-index: 10;
+  opacity: 0.5;
+}
+
+.fake-grid-item:nth-child(2n) {
+  background: blue;
 }
