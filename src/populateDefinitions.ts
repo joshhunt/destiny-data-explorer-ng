@@ -16,11 +16,11 @@ class DefinitionsStore {
 
   constructor() {
     this.ready = openDB(this.dbName, this.dbVersion, {
-      upgrade: this.#upgradeHandler,
+      upgrade: this.upgradeHandler,
     });
   }
 
-  #upgradeHandler(db: IDBPDatabase<unknown>) {
+  upgradeHandler(db: IDBPDatabase<unknown>) {
     const objectStore = db.createObjectStore(this.storeName, {
       keyPath: ["tableName", "key"],
     });
