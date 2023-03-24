@@ -8,20 +8,20 @@ interface StoredDefinition {
 }
 
 class DefinitionsStore {
-  #dbVersion = 1;
-  #dbName = "data-explorer-ng";
-  #storeName = "definitions";
+  dbVersion = 1;
+  dbName = "data-explorer-ng";
+  storeName = "definitions";
 
   ready: Promise<IDBPDatabase<unknown>>;
 
   constructor() {
-    this.ready = openDB(this.#dbName, this.#dbVersion, {
+    this.ready = openDB(this.dbName, this.dbVersion, {
       upgrade: this.#upgradeHandler,
     });
   }
 
   #upgradeHandler(db: IDBPDatabase<unknown>) {
-    const objectStore = db.createObjectStore(this.#storeName, {
+    const objectStore = db.createObjectStore(this.storeName, {
       keyPath: ["tableName", "key"],
     });
 
@@ -31,8 +31,8 @@ class DefinitionsStore {
   }
 
   async addDefinitions(tableName: string, definitions: any[]) {
-    const tx = (await this.ready).transaction(this.#storeName, "readwrite");
-    const store = tx.objectStore(this.#storeName);
+    const tx = (await this.ready).transaction(this.storeName, "readwrite");
+    const store = tx.objectStore(this.storeName);
 
     for (const def of definitions) {
       const storedDef: StoredDefinition = {
@@ -48,21 +48,21 @@ class DefinitionsStore {
   }
 
   async getDefinition(tableName: string, hash: number) {
-    const def = (await this.ready).get(this.#storeName, [tableName, hash]);
+    const def = (await this.ready).get(this.storeName, [tableName, hash]);
     return def;
   }
 
   async getByIndex(tableName: string, index: number) {
-    const tx = (await this.ready).transaction(this.#storeName, "readonly");
-    const store = tx.objectStore(this.#storeName);
+    const tx = (await this.ready).transaction(this.storeName, "readonly");
+    const store = tx.objectStore(this.storeName);
     const storeIndex = store.index("byIndex");
 
     return storeIndex.get([tableName, index]);
   }
 
   async countForTable(tableName: string) {
-    const tx = (await this.ready).transaction(this.#storeName, "readonly");
-    const store = tx.objectStore(this.#storeName);
+    const tx = (await this.ready).transaction(this.storeName, "readonly");
+    const store = tx.objectStore(this.storeName);
     const storeIndex = store.index("tableName");
     return storeIndex.count(tableName);
   }
